@@ -21,9 +21,11 @@
 #include "serialsetting.h"
 #include "serialsetting_p.h"
 
-#if !NM_CHECK_VERSION(1, 0, 0)
-#include <nm-setting-serial.h>
-#endif
+#define NM_SETTING_SERIAL_BAUD "baud"
+#define NM_SETTING_SERIAL_BITS "bits"
+#define NM_SETTING_SERIAL_PARITY "parity"
+#define NM_SETTING_SERIAL_STOPBITS "stopbits"
+#define NM_SETTING_SERIAL_SEND_DELAY "send-delay"
 
 #include <QtCore/QDebug>
 

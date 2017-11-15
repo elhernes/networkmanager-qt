@@ -26,7 +26,7 @@
 #include "manager.h"
 #include "manager_p.h"
 
-#include "gredeviceinterface.h"
+#include "dbus/gredeviceinterface.h"
 
 namespace NetworkManager
 {

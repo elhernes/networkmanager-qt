@@ -22,7 +22,7 @@
 #include "wirelesssetting_p.h"
 
 #if !NM_CHECK_VERSION(1, 0, 0)
-#include <nm-setting-wireless.h>
+#include <NetworkManager/nm-setting-wireless.h>
 #endif
 
 //define the deprecated&dropped values
@@ -30,14 +30,30 @@
 #define NM_SETTING_WIRELESS_SEC "security"
 #endif
 
-#if !NM_CHECK_VERSION(1, 2, 0)
 #define NM_SETTING_WIRELESS_MAC_ADDRESS_RANDOMIZATION "mac-address-randomization"
 #define NM_SETTING_WIRELESS_POWERSAVE "powersave"
-#endif
 
-#if !NM_CHECK_VERSION(1, 4, 0)
 #define NM_SETTING_WIRELESS_GENERATE_MAC_ADDRESS_MASK "generate-mac-address-mask"
-#endif
+
+#define NM_SETTING_WIRELESS_SSID        "ssid"
+#define NM_SETTING_WIRELESS_MODE        "mode"
+#define NM_SETTING_WIRELESS_BAND        "band"
+#define NM_SETTING_WIRELESS_CHANNEL     "channel"
+#define NM_SETTING_WIRELESS_BSSID       "bssid"
+#define NM_SETTING_WIRELESS_RATE        "rate"
+#define NM_SETTING_WIRELESS_TX_POWER    "tx-power"
+#define NM_SETTING_WIRELESS_MAC_ADDRESS "mac-address"
+#define NM_SETTING_WIRELESS_CLONED_MAC_ADDRESS "cloned-mac-address"
+#define NM_SETTING_WIRELESS_MAC_ADDRESS_BLACKLIST "mac-address-blacklist"
+#define NM_SETTING_WIRELESS_MTU         "mtu"
+#define NM_SETTING_WIRELESS_SEEN_BSSIDS "seen-bssids"
+#define NM_SETTING_WIRELESS_HIDDEN      "hidden"
+#define NM_SETTING_WIRELESS_POWERSAVE   "powersave"
+#define NM_SETTING_WIRELESS_SETTING_NAME "802-11-wireless"
+
+#define NM_SETTING_WIRELESS_MODE_INFRA  "infrastructure"
+#define NM_SETTING_WIRELESS_MODE_AP     "ap"
+#define NM_SETTING_WIRELESS_MODE_ADHOC  "adhoc"
 
 #include <QtCore/QDebug>
 

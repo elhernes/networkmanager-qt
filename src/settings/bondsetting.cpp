@@ -22,13 +22,11 @@
 #include "bondsetting_p.h"
 
 #if !NM_CHECK_VERSION(1, 0, 0)
-#include <nm-setting-bond.h>
+#include <NetworkManager/nm-setting-bond.h>
 #endif
 
-//define the deprecated&dropped values
-#if NM_CHECK_VERSION(1, 0, 0)
 #define NM_SETTING_BOND_INTERFACE_NAME "interface-name"
-#endif
+#define NM_SETTING_BOND_OPTIONS "options"
 
 #include <QtCore/QDebug>
 

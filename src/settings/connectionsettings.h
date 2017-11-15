@@ -22,16 +22,11 @@
 #ifndef NETWORKMANAGERQT_CONNECTION_SETTINGS_H
 #define NETWORKMANAGERQT_CONNECTION_SETTINGS_H
 
-#include <networkmanagerqt/networkmanagerqt_export.h>
+#include "../networkmanagerqt_export.h"
 #include "setting.h"
 
 #undef signals
-#include <nm-version.h>
-#if NM_CHECK_VERSION(1, 0, 0)
-#include <libnm/NetworkManager.h>
-#else
-#include <NetworkManager.h>
-#endif
+#include <NetworkManager/NetworkManager.h>
 #define signals Q_SIGNALS
 
 #include <QtCore/QString>

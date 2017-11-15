@@ -27,7 +27,7 @@
 
 #include <QDBusObjectPath>
 
-#include <nm-setting-connection.h>
+#include <NetworkManager/NetworkManager.h>
 
 #include "nmdebug.h"
 
@@ -173,7 +173,9 @@ void NetworkManager::SettingsPrivate::propertiesChanged(const QVariantMap &prope
             //will never get here in runtime NM < 0.9.10
             // TODO some action??
         } else {
+#ifdef WARN_UNHANDLED
             qCWarning(NMQT) << Q_FUNC_INFO << "Unhandled property" << property;
+#endif
         }
         ++it;
     }

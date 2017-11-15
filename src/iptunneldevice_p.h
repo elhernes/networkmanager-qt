@@ -26,7 +26,7 @@
 #include "manager.h"
 #include "manager_p.h"
 
-#include "iptunneldeviceinterface.h"
+#include "dbus/iptunneldeviceinterface.h"
 
 namespace NetworkManager
 {

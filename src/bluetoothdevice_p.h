@@ -20,6 +20,7 @@
 #ifndef NETWORKMANAGERQT_BLUETOOTH_DEVICE_P_H
 #define NETWORKMANAGERQT_BLUETOOTH_DEVICE_P_H
 
+#include "bluetoothdevice.h"
 #include "modemdevice_p.h"
 #include "dbus/bluetoothdeviceinterface.h"
 

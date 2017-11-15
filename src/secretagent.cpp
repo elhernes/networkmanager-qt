@@ -24,18 +24,14 @@
 #include "nmdebug.h"
 
 #undef signals
-#include <nm-version.h>
-#if NM_CHECK_VERSION(1, 0, 0)
-#include <libnm/NetworkManager.h>
-#include <NetworkManager.h>
-#endif
+#include <NetworkManager/NetworkManager.h>
 #define signals Q_SIGNALS
 
 #include <QDBusArgument>
 #include <QDBusConnection>
 
-#include "agentmanagerinterface.h"
-#include "secretagentadaptor.h"
+#include "dbus/agentmanagerinterface.h"
+#include "dbus/secretagentadaptor.h"
 
 NetworkManager::SecretAgentPrivate::SecretAgentPrivate(const QString &id, NetworkManager::SecretAgent *parent)
     : q_ptr(parent)

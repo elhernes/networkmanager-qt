@@ -24,12 +24,7 @@
 #include "wirelessdevice_p.h"
 
 #undef signals
-#include <nm-version.h>
-#if NM_CHECK_VERSION(1, 0, 0)
-#include <libnm/NetworkManager.h>
-#else
-#include <libnm-glib/nm-device-wifi.h>
-#endif
+#include <NetworkManager/NetworkManager.h>
 #define signals Q_SIGNALS
 
 #include "accesspoint.h"

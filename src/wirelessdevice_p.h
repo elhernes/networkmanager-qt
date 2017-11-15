@@ -22,6 +22,7 @@
 #ifndef NETWORKMANAGERQT_WIRELESSDEVICE_P_H
 #define NETWORKMANAGERQT_WIRELESSDEVICE_P_H
 
+#include "wirelessdevice.h"
 #include "device_p.h"
 #include "dbus/wirelessdeviceinterface.h"
 

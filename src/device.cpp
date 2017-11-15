@@ -339,7 +339,9 @@ void NetworkManager::DevicePrivate::propertyChanged(const QString &property, con
         metered = NetworkManager::DevicePrivate::convertMeteredStatus(value.toUInt());
         Q_EMIT q->meteredChanged(metered);
     } else {
+#ifdef WARN_UNHANDLED
         qCWarning(NMQT) << Q_FUNC_INFO << "Unhandled property" << property;
+#endif
     }
 }
 

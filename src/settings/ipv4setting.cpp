@@ -26,10 +26,6 @@
 
 #include <arpa/inet.h>
 
-#if !NM_CHECK_VERSION(1, 0, 0)
-#include <nm-setting-ip4-config.h>
-#endif
-
 #include <QtCore/QDebug>
 
 NetworkManager::Ipv4SettingPrivate::Ipv4SettingPrivate()

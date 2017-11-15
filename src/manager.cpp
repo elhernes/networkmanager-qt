@@ -27,12 +27,7 @@
 #include "macros.h"
 
 #undef signals
-#include <nm-version.h>
-#if NM_CHECK_VERSION(1, 0, 0)
-#include <libnm/NetworkManager.h>
-#else
-#include <NetworkManager.h>
-#endif
+#include <NetworkManager/NetworkManager.h>
 #define signals Q_SIGNALS
 
 #include "activeconnection.h"
@@ -325,31 +320,47 @@ NetworkManager::Device::Ptr NetworkManager::NetworkManagerPrivate::createNetwork
     case Device::Modem:
         createdInterface = Device::Ptr(new NetworkManager::ModemDevice(uni), &QObject::deleteLater);
         break;
+#ifdef WITH_BLUETOOTH
     case Device::Bluetooth:
         createdInterface = Device::Ptr(new NetworkManager::BluetoothDevice(uni), &QObject::deleteLater);
         break;
+#endif
+#ifdef WITH_WIMAX
     case Device::Wimax:
         createdInterface = Device::Ptr(new NetworkManager::WimaxDevice(uni), &QObject::deleteLater);
         break;
+#endif
+#ifdef WITH_OLPCMESH
     case Device::OlpcMesh:
         createdInterface = Device::Ptr(new NetworkManager::OlpcMeshDevice(uni), &QObject::deleteLater);
         break;
+#endif
+#ifdef WITH_INFINIBAND
     case Device::InfiniBand:
         createdInterface = Device::Ptr(new NetworkManager::InfinibandDevice(uni), &QObject::deleteLater);
         break;
+#endif
+#ifdef WITH_BOND
     case Device::Bond:
         createdInterface = Device::Ptr(new NetworkManager::BondDevice(uni), &QObject::deleteLater);
         break;
+#endif
+#ifdef WITH_VLAN
     case Device::Vlan:
         createdInterface = Device::Ptr(new NetworkManager::VlanDevice(uni), &QObject::deleteLater);
         break;
+#endif
+#ifdef WITH_ADSL
     case Device::Adsl:
         createdInterface = Device::Ptr(new NetworkManager::AdslDevice(uni), &QObject::deleteLater);
         break;
+#endif
+#ifdef WITH_BRIDGE
     case Device::Bridge:
         createdInterface = Device::Ptr(new NetworkManager::BridgeDevice(uni), &QObject::deleteLater);
         break;
-    //No need to check checkVersion, because we can't get Generic, Gre, MacVlan, Tun & Veth values in incompatible runtime
+#endif
+        //No need to check checkVersion, because we can't get Generic, Gre, MacVlan, Tun & Veth values in incompatible runtime
     case Device::Generic:
         createdInterface = Device::Ptr(new NetworkManager::GenericDevice(uni), &QObject::deleteLater);
         break;
@@ -359,9 +370,11 @@ NetworkManager::Device::Ptr NetworkManager::NetworkManagerPrivate::createNetwork
     case Device::MacVlan:
         createdInterface = Device::Ptr(new NetworkManager::MacVlanDevice(uni), &QObject::deleteLater);
         break;
+#ifdef WITH_TUN
     case Device::Tun:
         createdInterface = Device::Ptr(new NetworkManager::TunDevice(uni), &QObject::deleteLater);
         break;
+#endif
     case Device::Veth:
         createdInterface = Device::Ptr(new NetworkManager::VethDevice(uni), &QObject::deleteLater);
         break;
@@ -394,7 +407,9 @@ NetworkManager::Device::List NetworkManager::NetworkManagerPrivate::networkInter
         if (!networkInterface.isNull()) {
             list.append(networkInterface);
         } else {
+#ifdef WARN_UNHANDLED
             qCWarning(NMQT) << "warning: null network Interface for" << i.key();
+#endif
         }
     }
 
@@ -810,7 +825,9 @@ void NetworkManager::NetworkManagerPrivate::propertiesChanged(const QVariantMap 
             m_metered = (NetworkManager::Device::MeteredStatus)it->toUInt();
             Q_EMIT meteredChanged(m_metered);
         } else {
+#ifdef WARN_UNHANDLED
             qCWarning(NMQT) << Q_FUNC_INFO << "Unhandled property" << property;
+#endif
         }
         ++it;
     }

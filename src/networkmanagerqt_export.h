@@ -1,0 +1,41 @@
+
+#ifndef NETWORKMANAGERQT_EXPORT_H
+#define NETWORKMANAGERQT_EXPORT_H
+
+#ifdef NETWORKMANAGERQT_STATIC_DEFINE
+#  define NETWORKMANAGERQT_EXPORT
+#  define NETWORKMANAGERQT_NO_EXPORT
+#else
+#  ifndef NETWORKMANAGERQT_EXPORT
+#    ifdef KF5NetworkManagerQt_EXPORTS
+        /* We are building this library */
+#      define NETWORKMANAGERQT_EXPORT __attribute__((visibility("default")))
+#    else
+        /* We are using this library */
+#      define NETWORKMANAGERQT_EXPORT __attribute__((visibility("default")))
+#    endif
+#  endif
+
+#  ifndef NETWORKMANAGERQT_NO_EXPORT
+#    define NETWORKMANAGERQT_NO_EXPORT __attribute__((visibility("hidden")))
+#  endif
+#endif
+
+#ifndef NETWORKMANAGERQT_DEPRECATED
+#  define NETWORKMANAGERQT_DEPRECATED __attribute__ ((__deprecated__))
+#endif
+
+#ifndef NETWORKMANAGERQT_DEPRECATED_EXPORT
+#  define NETWORKMANAGERQT_DEPRECATED_EXPORT NETWORKMANAGERQT_EXPORT NETWORKMANAGERQT_DEPRECATED
+#endif
+
+#ifndef NETWORKMANAGERQT_DEPRECATED_NO_EXPORT
+#  define NETWORKMANAGERQT_DEPRECATED_NO_EXPORT NETWORKMANAGERQT_NO_EXPORT NETWORKMANAGERQT_DEPRECATED
+#endif
+
+#define DEFINE_NO_DEPRECATED 0
+#if DEFINE_NO_DEPRECATED
+# define NETWORKMANAGERQT_NO_DEPRECATED
+#endif
+
+#endif

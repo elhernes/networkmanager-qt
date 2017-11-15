@@ -22,8 +22,13 @@
 #include "bluetoothsetting_p.h"
 
 #if !NM_CHECK_VERSION(1, 0, 0)
-#include <nm-setting-bluetooth.h>
+#include <NetworkManager/nm-setting-bluetooth.h>
 #endif
+
+#define NM_SETTING_BLUETOOTH_BDADDR    "bdaddr"
+#define NM_SETTING_BLUETOOTH_TYPE      "type"
+#define NM_SETTING_BLUETOOTH_TYPE_DUN  "dun"
+#define NM_SETTING_BLUETOOTH_TYPE_PANU "panu"
 
 #include <QtCore/QDebug>
 

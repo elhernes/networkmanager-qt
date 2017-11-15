@@ -23,9 +23,9 @@
 #ifndef GENERIC_TYPES_H
 #define GENERIC_TYPES_H
 
-#include <networkmanagerqt/networkmanagerqt_export.h>
+#include "networkmanagerqt_export.h"
 
-#include <nm-version.h>
+#include <NetworkManager/NetworkManager.h>
 
 #include <QtCore/QVariantMap>
 #include <QDBusArgument>

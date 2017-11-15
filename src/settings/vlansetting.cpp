@@ -22,13 +22,16 @@
 #include "vlansetting_p.h"
 
 #if !NM_CHECK_VERSION(1, 0, 0)
-#include <nm-setting-vlan.h>
+#include <NetworkManager/nm-setting-vlan.h>
 #endif
 
 //define the deprecated&dropped values
-#if NM_CHECK_VERSION(1, 0, 0)
-#define NM_SETTING_VLAN_INTERFACE_NAME "interface-name"
-#endif
+#define NM_SETTING_VLAN_INTERFACE_NAME       "interface-name"
+#define NM_SETTING_VLAN_PARENT               "parent"
+#define NM_SETTING_VLAN_ID                   "id"
+#define NM_SETTING_VLAN_FLAGS                "flags"
+#define NM_SETTING_VLAN_INGRESS_PRIORITY_MAP "ingress-priority-map"
+#define NM_SETTING_VLAN_EGRESS_PRIORITY_MAP  "egress-priority-map"
 
 #include <QtCore/QDebug>
 

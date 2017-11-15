@@ -26,7 +26,7 @@
 #include "manager.h"
 #include "manager_p.h"
 
-#include "teamdeviceinterface.h"
+#include "dbus/teamdeviceinterface.h"
 
 namespace NetworkManager
 {

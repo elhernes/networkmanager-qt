@@ -21,32 +21,29 @@
 #include "setting.h"
 
 #undef signals
-#include <nm-version.h>
-#if NM_CHECK_VERSION(1, 0, 0)
-#include <libnm/NetworkManager.h>
-#else
-#include <NetworkManager.h>
-#include <nm-setting-bond.h>
-#include <nm-setting-bridge.h>
-#include <nm-setting-cdma.h>
-#include <nm-setting-connection.h>
-#include <nm-setting-wired.h>
-#include <nm-setting-ip4-config.h>
-#include <nm-setting-ip6-config.h>
-#include <nm-setting-8021x.h>
-#include <nm-setting-gsm.h>
-#include <nm-setting-bluetooth.h>
-#include <nm-setting-olpc-mesh.h>
-#include <nm-setting-ppp.h>
-#include <nm-setting-pppoe.h>
-#include <nm-setting-serial.h>
-#include <nm-setting-team.h>
-#include <nm-setting-generic.h>
-#include <nm-setting-vlan.h>
-#include <nm-setting-vpn.h>
-#include <nm-setting-wireless.h>
-#include <nm-setting-wireless-security.h>
-#include <nm-setting-wimax.h>
+#include <NetworkManager/NetworkManager.h>
+#if 0
+#include <NetworkManager/nm-setting-bond.h>
+#include <NetworkManager/nm-setting-bridge.h>
+#include <NetworkManager/nm-setting-cdma.h>
+#include <NetworkManager/nm-setting-connection.h>
+#include <NetworkManager/nm-setting-wired.h>
+#include <NetworkManager/nm-setting-ip4-config.h>
+#include <NetworkManager/nm-setting-ip6-config.h>
+#include <NetworkManager/nm-setting-8021x.h>
+#include <NetworkManager/nm-setting-gsm.h>
+#include <NetworkManager/nm-setting-bluetooth.h>
+#include <NetworkManager/nm-setting-olpc-mesh.h>
+#include <NetworkManager/nm-setting-ppp.h>
+#include <NetworkManager/nm-setting-pppoe.h>
+#include <NetworkManager/nm-setting-serial.h>
+#include <NetworkManager/nm-setting-team.h>
+#include <NetworkManager/nm-setting-generic.h>
+#include <NetworkManager/nm-setting-vlan.h>
+#include <NetworkManager/nm-setting-vpn.h>
+#include <NetworkManager/nm-setting-wireless.h>
+#include <NetworkManager/nm-setting-wireless-security.h>
+#include <NetworkManager/nm-setting-wimax.h>
 #endif
 #define signals Q_SIGNALS
 

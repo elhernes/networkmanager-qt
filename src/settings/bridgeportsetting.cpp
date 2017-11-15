@@ -21,9 +21,9 @@
 #include "bridgeportsetting.h"
 #include "bridgeportsetting_p.h"
 
-#if !NM_CHECK_VERSION(1, 0, 0)
-#include <nm-setting-bridge-port.h>
-#endif
+#define NM_SETTING_BRIDGE_PORT_PRIORITY     "priority"
+#define NM_SETTING_BRIDGE_PORT_PATH_COST    "path-cost"
+#define NM_SETTING_BRIDGE_PORT_HAIRPIN_MODE "hairpin-mode"
 
 #include <QtCore/QDebug>
 

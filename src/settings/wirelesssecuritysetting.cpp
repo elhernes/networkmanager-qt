@@ -21,8 +21,26 @@
 #include "wirelesssecuritysetting.h"
 #include "wirelesssecuritysetting_p.h"
 
+#define NM_SETTING_WIRELESS_SECURITY_KEY_MGMT "key-mgmt"
+#define NM_SETTING_WIRELESS_SECURITY_WEP_TX_KEYIDX "wep-tx-keyidx"
+#define NM_SETTING_WIRELESS_SECURITY_AUTH_ALG "auth-alg"
+#define NM_SETTING_WIRELESS_SECURITY_PROTO "proto"
+#define NM_SETTING_WIRELESS_SECURITY_PAIRWISE "pairwise"
+#define NM_SETTING_WIRELESS_SECURITY_GROUP "group"
+#define NM_SETTING_WIRELESS_SECURITY_LEAP_USERNAME "leap-username"
+#define NM_SETTING_WIRELESS_SECURITY_WEP_KEY0 "wep-key0"
+#define NM_SETTING_WIRELESS_SECURITY_WEP_KEY1 "wep-key1"
+#define NM_SETTING_WIRELESS_SECURITY_WEP_KEY2 "wep-key2"
+#define NM_SETTING_WIRELESS_SECURITY_WEP_KEY3 "wep-key3"
+#define NM_SETTING_WIRELESS_SECURITY_WEP_KEY_FLAGS "wep-key-flags"
+#define NM_SETTING_WIRELESS_SECURITY_WEP_KEY_TYPE "wep-key-type"
+#define NM_SETTING_WIRELESS_SECURITY_PSK "psk"
+#define NM_SETTING_WIRELESS_SECURITY_PSK_FLAGS "psk-flags"
+#define NM_SETTING_WIRELESS_SECURITY_LEAP_PASSWORD "leap-password"
+#define NM_SETTING_WIRELESS_SECURITY_LEAP_PASSWORD_FLAGS "leap-password-flags"
+
 #if !NM_CHECK_VERSION(1, 0, 0)
-#include <nm-setting-wireless-security.h>
+#include <NetworkManager/nm-setting-wireless-security.h>
 #endif
 
 #include <QtCore/QDebug>

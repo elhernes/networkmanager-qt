@@ -24,7 +24,7 @@
 #include "device_p.h"
 #include "genericdevice.h"
 #include "manager_p.h"
-#include "genericdeviceinterface.h"
+#include "dbus/genericdeviceinterface.h"
 
 namespace NetworkManager
 {

@@ -24,7 +24,7 @@
 #include "device_p.h"
 #include "macvlandevice.h"
 #include "manager_p.h"
-#include "macvlandeviceinterface.h"
+#include "dbus/macvlandeviceinterface.h"
 
 namespace NetworkManager
 {

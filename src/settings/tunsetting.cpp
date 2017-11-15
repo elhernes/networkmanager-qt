@@ -21,7 +21,7 @@
 #include "tunsetting.h"
 #include "tunsetting_p.h"
 
-#if !NM_CHECK_VERSION(1, 1, 92)
+#if NM_CHECK_VERSION(1, 1, 92)
 #define NM_SETTING_TUN_SETTING_NAME         "tun"
 
 #define NM_SETTING_TUN_MODE                 "mode"

@@ -99,7 +99,9 @@ void NetworkManager::Dhcp4ConfigPrivate::dhcp4PropertiesChanged(const QVariantMa
             options = it.value().toMap();
             Q_EMIT q->optionsChanged(options);
         } else {
+#ifdef WARN_UNHANDLED
             qCWarning(NMQT) << Q_FUNC_INFO << "Unhandled property" << property;
+#endif
         }
         ++it;
     }

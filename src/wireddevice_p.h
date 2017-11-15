@@ -22,6 +22,7 @@
 #define NETWORKMANAGERQT_WIREDDEVICE_P_H
 
 #include "device_p.h"
+#include "wireddevice.h"
 #include "dbus/wireddeviceinterface.h"
 
 namespace NetworkManager

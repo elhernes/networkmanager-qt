@@ -23,9 +23,9 @@
 #ifndef NETWORKMANAGERQT_SETTINGS_CONNECTION_H
 #define NETWORKMANAGERQT_SETTINGS_CONNECTION_H
 
-#include <networkmanagerqt/networkmanagerqt_export.h>
+#include "networkmanagerqt_export.h"
 #include "generictypes.h"
-#include "connectionsettings.h"
+#include "settings/connectionsettings.h"
 
 #include <QObject>
 #include <QSharedPointer>

@@ -21,10 +21,22 @@
 #ifndef NETWORKMANAGERQT_WIRED_SETTING_H
 #define NETWORKMANAGERQT_WIRED_SETTING_H
 
-#include <networkmanagerqt/networkmanagerqt_export.h>
+#include "../networkmanagerqt_export.h"
 #include "setting.h"
 
 #include <QtCore/QStringList>
+
+#define NM_SETTING_WIRED_PORT "port"
+#define NM_SETTING_WIRED_SPEED "speed"
+#define NM_SETTING_WIRED_DUPLEX "duplex"
+#define NM_SETTING_WIRED_AUTO_NEGOTIATE "auto-negotiate"
+#define NM_SETTING_WIRED_MAC_ADDRESS "mac-address"
+#define NM_SETTING_WIRED_CLONED_MAC_ADDRESS "cloned-mac-address"
+#define NM_SETTING_WIRED_MAC_ADDRESS_BLACKLIST "mac-address-blacklist"
+#define NM_SETTING_WIRED_MTU "mtu"
+#define NM_SETTING_WIRED_S390_SUBCHANNELS "s390-subchannels"
+#define NM_SETTING_WIRED_S390_NETTYPE "s390-nettype"
+#define NM_SETTING_WIRED_S390_OPTIONS "s390-options"
 
 namespace NetworkManager
 {

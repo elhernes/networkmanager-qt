@@ -22,6 +22,7 @@
 #define NETWORKMANAGERQT_OLPCMESHDEVICE_P_H
 
 #include "device_p.h"
+#include "olpcmeshdevice.h"
 #include "dbus/olpcmeshdeviceinterface.h"
 
 namespace NetworkManager

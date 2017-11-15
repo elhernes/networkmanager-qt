@@ -21,9 +21,10 @@
 #include "pppoesetting.h"
 #include "pppoesetting_p.h"
 
-#if !NM_CHECK_VERSION(1, 0, 0)
-#include <nm-setting-pppoe.h>
-#endif
+#define NM_SETTING_PPPOE_SERVICE        "service"
+#define NM_SETTING_PPPOE_USERNAME       "username"
+#define NM_SETTING_PPPOE_PASSWORD       "password"
+#define NM_SETTING_PPPOE_PASSWORD_FLAGS "password-flags"
 
 #include <QtCore/QDebug>
 

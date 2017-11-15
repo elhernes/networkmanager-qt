@@ -21,6 +21,7 @@
 #ifndef NETWORKMANAGERQT_MODEMDEVICE_P_H
 #define NETWORKMANAGERQT_MODEMDEVICE_P_H
 
+#include "modemdevice.h"
 #include "device_p.h"
 #include "dbus/modemdeviceinterface.h"
 

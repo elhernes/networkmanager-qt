@@ -24,7 +24,7 @@
 #include "nmdebug.h"
 
 #if !NM_CHECK_VERSION(1, 0, 0)
-#include <nm-setting-generic.h>
+#include <NetworkManager/nm-setting-generic.h>
 #endif
 
 NetworkManager::GenericSettingPrivate::GenericSettingPrivate()

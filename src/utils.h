@@ -25,10 +25,10 @@
 #include <QStringList>
 #include <QHostAddress>
 
-#include <networkmanagerqt/networkmanagerqt_export.h>
+#include "networkmanagerqt_export.h"
 #include "wirelessdevice.h"
-#include "wirelesssecuritysetting.h"
-#include "wirelesssetting.h"
+#include "settings/wirelesssecuritysetting.h"
+#include "settings/wirelesssetting.h"
 
 namespace NetworkManager
 {

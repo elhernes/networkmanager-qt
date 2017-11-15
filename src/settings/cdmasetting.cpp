@@ -21,9 +21,10 @@
 #include "cdmasetting.h"
 #include "cdmasetting_p.h"
 
-#if !NM_CHECK_VERSION(1, 0, 0)
-#include <nm-setting-cdma.h>
-#endif
+#define NM_SETTING_CDMA_NUMBER         "number"
+#define NM_SETTING_CDMA_USERNAME       "username"
+#define NM_SETTING_CDMA_PASSWORD       "password"
+#define NM_SETTING_CDMA_PASSWORD_FLAGS "password-flags"
 
 #include <QtCore/QDebug>
 

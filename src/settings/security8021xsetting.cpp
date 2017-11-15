@@ -21,13 +21,40 @@
 #include "security8021xsetting.h"
 #include "security8021xsetting_p.h"
 
-#if !NM_CHECK_VERSION(1, 0, 0)
-#include <nm-setting-8021x.h>
-#endif
+#define NM_SETTING_802_1X_EAP "eap"
+#define NM_SETTING_802_1X_IDENTITY "identity"
+#define NM_SETTING_802_1X_ANONYMOUS_IDENTITY "anonymous-identity"
+#define NM_SETTING_802_1X_PAC_FILE "pac-file"
+#define NM_SETTING_802_1X_CA_CERT "ca-cert"
+#define NM_SETTING_802_1X_CA_PATH "ca-path"
+#define NM_SETTING_802_1X_SUBJECT_MATCH "subject-match"
+#define NM_SETTING_802_1X_ALTSUBJECT_MATCHES "altsubject-matches"
+#define NM_SETTING_802_1X_CLIENT_CERT "client-cert"
+#define NM_SETTING_802_1X_PHASE1_PEAPVER "phase1-peapver"
+#define NM_SETTING_802_1X_PHASE1_PEAPLABEL "phase1-peaplabel"
+#define NM_SETTING_802_1X_PHASE1_FAST_PROVISIONING "phase1-fast-provisioning"
+#define NM_SETTING_802_1X_PHASE2_AUTH "phase2-auth"
+#define NM_SETTING_802_1X_PHASE2_AUTHEAP "phase2-autheap"
+#define NM_SETTING_802_1X_PHASE2_CA_CERT "phase2-ca-cert"
+#define NM_SETTING_802_1X_PHASE2_CA_PATH "phase2-ca-path"
+#define NM_SETTING_802_1X_PHASE2_SUBJECT_MATCH "phase2-subject-match"
+#define NM_SETTING_802_1X_PHASE2_ALTSUBJECT_MATCHES "phase2-altsubject-matches"
+#define NM_SETTING_802_1X_PHASE2_CLIENT_CERT "phase2-client-cert"
+#define NM_SETTING_802_1X_PASSWORD "password"
+#define NM_SETTING_802_1X_PASSWORD_FLAGS "password-flags"
+#define NM_SETTING_802_1X_PASSWORD_RAW "password-raw"
+#define NM_SETTING_802_1X_PASSWORD_RAW_FLAGS "password-raw-flags"
+#define NM_SETTING_802_1X_PRIVATE_KEY "private-key"
+#define NM_SETTING_802_1X_PRIVATE_KEY_PASSWORD "private-key-password"
+#define NM_SETTING_802_1X_PRIVATE_KEY_PASSWORD_FLAGS "private-key-password-flags"
+#define NM_SETTING_802_1X_PHASE2_PRIVATE_KEY "phase2-private-key"
+#define NM_SETTING_802_1X_PHASE2_PRIVATE_KEY_PASSWORD "phase2-private-key-password"
+#define NM_SETTING_802_1X_PHASE2_PRIVATE_KEY_PASSWORD_FLAGS "phase2-private-key-password-flags"
+#define NM_SETTING_802_1X_PIN "pin"
+#define NM_SETTING_802_1X_PIN_FLAGS "pin-flags"
+#define NM_SETTING_802_1X_SYSTEM_CA_CERTS "system-ca-certs"
 
-#if !NM_CHECK_VERSION(1, 2, 0)
 #define NM_SETTING_802_1X_DOMAIN_SUFFIX_MATCH "domain-suffix-match"
-#endif
 
 #include <QtCore/QDebug>
 

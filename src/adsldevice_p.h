@@ -26,7 +26,7 @@
 #include "manager.h"
 #include "manager_p.h"
 
-#include "adsldeviceinterface.h"
+#include "dbus/adsldeviceinterface.h"
 
 namespace NetworkManager
 {

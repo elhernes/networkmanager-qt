@@ -113,7 +113,9 @@ void NetworkManager::DeviceStatisticsPrivate::propertiesChanged(const QVariantMa
             txBytes = it->toULongLong();
             Q_EMIT q->txBytesChanged(txBytes);
         } else {
+#ifdef WARN_UNHANDLED
             qCWarning(NMQT) << Q_FUNC_INFO << "Unhandled property" << property;
+#endif
         }
         ++it;
     }

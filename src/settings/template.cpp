@@ -22,7 +22,7 @@
 #include "template_p.h"
 
 // TODO: Uncomment and replace the template with the setting that you want to implement
-//#include <nm-setting-template.h>
+//#include <NetworkManager/nm-setting-template.h>
 
 NetworkManager::TemplateSettingPrivate::TemplateSettingPrivate()
 //     : name(NM_SETTING_TEMPLATE_SETTING_NAME)

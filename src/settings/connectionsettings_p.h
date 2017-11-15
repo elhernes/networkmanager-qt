@@ -27,6 +27,20 @@
 #include <QtCore/QString>
 #include <QtCore/QDateTime>
 
+#define NM_SETTING_CONNECTION_ID             "id"
+#define NM_SETTING_CONNECTION_UUID           "uuid"
+#define NM_SETTING_CONNECTION_INTERFACE_NAME "interface-name"
+#define NM_SETTING_CONNECTION_TYPE           "type"
+#define NM_SETTING_CONNECTION_AUTOCONNECT    "autoconnect"
+#define NM_SETTING_CONNECTION_TIMESTAMP      "timestamp"
+#define NM_SETTING_CONNECTION_READ_ONLY      "read-only"
+#define NM_SETTING_CONNECTION_PERMISSIONS    "permissions"
+#define NM_SETTING_CONNECTION_ZONE           "zone"
+#define NM_SETTING_CONNECTION_MASTER         "master"
+#define NM_SETTING_CONNECTION_SLAVE_TYPE     "slave-type"
+#define NM_SETTING_CONNECTION_SECONDARIES    "secondaries"
+#define NM_SETTING_CONNECTION_GATEWAY_PING_TIMEOUT "gateway-ping-timeout"
+
 namespace NetworkManager
 {
 

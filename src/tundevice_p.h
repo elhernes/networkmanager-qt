@@ -23,7 +23,7 @@
 
 #include "tundevice.h"
 #include "device_p.h"
-#include "tundeviceinterface.h"
+#include "dbus/tundeviceinterface.h"
 
 namespace NetworkManager
 {

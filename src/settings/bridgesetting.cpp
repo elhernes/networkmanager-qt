@@ -22,15 +22,24 @@
 #include "bridgesetting_p.h"
 
 #if !NM_CHECK_VERSION(1, 0, 0)
-#include <nm-setting-bridge.h>
+#include <NetworkManager/nm-setting-bridge.h>
 #define NM_SETTING_BRIDGE_MAC_ADDRESS "mac-address"
 #else
 #define NM_SETTING_BRIDGE_INTERFACE_NAME "interface-name"
 #endif
 
-#if !NM_CHECK_VERSION(1, 2, 0)
 #define NM_SETTING_BRIDGE_MULTICAST_SNOOPING "multicast-snooping"
-#endif
+
+#define NM_SETTING_BRIDGE_SETTING_NAME "bridge"
+
+#define NM_SETTING_BRIDGE_INTERFACE_NAME "interface-name"
+#define NM_SETTING_BRIDGE_MAC_ADDRESS    "mac-address"
+#define NM_SETTING_BRIDGE_STP            "stp"
+#define NM_SETTING_BRIDGE_PRIORITY       "priority"
+#define NM_SETTING_BRIDGE_FORWARD_DELAY  "forward-delay"
+#define NM_SETTING_BRIDGE_HELLO_TIME     "hello-time"
+#define NM_SETTING_BRIDGE_MAX_AGE        "max-age"
+#define NM_SETTING_BRIDGE_AGEING_TIME    "ageing-time"
 
 #include <QtCore/QDebug>
 

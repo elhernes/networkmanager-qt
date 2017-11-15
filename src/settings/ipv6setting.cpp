@@ -29,7 +29,7 @@
 #include <arpa/inet.h>
 
 #if !NM_CHECK_VERSION(1, 0, 0)
-#include <nm-setting-ip6-config.h>
+#include <NetworkManager/nm-setting-ip6-config.h>
 #endif
 
 NetworkManager::Ipv6SettingPrivate::Ipv6SettingPrivate()

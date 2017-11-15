@@ -23,7 +23,7 @@
 #include "manager.h"
 
 #if !NM_CHECK_VERSION(1, 0, 0)
-#include <nm-setting-team.h>
+#include <NetworkManager/nm-setting-team.h>
 #endif
 
 //define the deprecated&dropped values
