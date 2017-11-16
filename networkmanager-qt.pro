@@ -628,12 +628,12 @@ for(h, PUBLIC_HEADERS_SETTINGS) {
 message($${public_headers.files})
 message($${public_headers_settings.files})
 
-INSTALL_DIR=/Volumes/Data/xyz
+#INSTALL_DIR=/Volumes/Data/xyz/
 
 public_headers.files+= src/networkmanagerqt_export.h
 
-public_headers.path = $${INSTALL_DIR}/include/NetworkManagerQt
-public_headers_settings.path = $${INSTALL_DIR}/include/NetworkManagerQt/settings
+public_headers.path = $${INSTALL_DIR}include/NetworkManagerQt
+public_headers_settings.path = $${INSTALL_DIR}include/NetworkManagerQt/settings
 
 INSTALLS+= public_headers public_headers_settings target
 
