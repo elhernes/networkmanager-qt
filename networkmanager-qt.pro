@@ -1,6 +1,6 @@
 TARGET=NetworkManagerQt
 TEMPLATE=lib
-CONFIG+=staticlib
+CONFIG+=shared_and_static
 
 QT += dbus network
 
