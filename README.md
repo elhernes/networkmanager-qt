@@ -2,6 +2,8 @@
 
 Qt wrapper for NetworkManager DBus API.
 
+This fork contains changes to build/install with qmake instead of cmake.
+
 ## Introduction
 
 NetworkManagerQt provides access to all NetworkManager features
