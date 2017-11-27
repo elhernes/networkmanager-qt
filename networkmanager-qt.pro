@@ -611,7 +611,7 @@ defineReplace(generateHeader) {
 	dots=../../../
     }
     t=include/NetworkManagerQt/$${cc}
-    inc="$${LITERAL_HASH}include \"$${path}$${f}\""
+    inc="$${LITERAL_HASH}include \"$${f}\""
     write_file($${PWD}/$${t}, inc)
 #    message(ln -sf $${dots}src/$${path}$${f} include/NetworkManagerQt/$${path}$${f})
     return(src/$${path}$${f} $${t})

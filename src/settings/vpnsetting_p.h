@@ -21,7 +21,7 @@
 #ifndef NETWORKMANAGERQT_VPN_SETTING_P_H
 #define NETWORKMANAGERQT_VPN_SETTING_P_H
 
-#include "generictypes.h"
+#include "../generictypes.h"
 
 #include <QtCore/QString>
 
