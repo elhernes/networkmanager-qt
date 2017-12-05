@@ -3,7 +3,7 @@ TEMPLATE=lib
 
 QT += dbus network
 CONFIG+=shared_and_static link_pkgconfig
-PKGCONFIG=libnm
+PKGCONFIG=NetworkManager
 
 INCLUDEPATH=$${PWD}/src
 
