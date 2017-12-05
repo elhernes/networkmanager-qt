@@ -1,8 +1,9 @@
 TARGET=NetworkManagerQt
 TEMPLATE=lib
-CONFIG+=shared_and_static
 
 QT += dbus network
+CONFIG+=shared_and_static link_pkgconfig
+PKGCONFIG=libnm
 
 INCLUDEPATH=$${PWD}/src
 
